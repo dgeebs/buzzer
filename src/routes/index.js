@@ -6,4 +6,9 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Buzzer' });
 });
 
+/* GET home page. */
+router.get('/buzz', function(req, res, next) {
+  res.render('buzz', {});
+});
+
 module.exports = router;

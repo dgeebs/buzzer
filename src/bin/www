@@ -28,6 +28,13 @@ var server = http.createServer(app);
 
 var io = new Server(server);
 
+io.on('connection', (socket) => {
+    socket.on('buzz', (message) => {
+        console.log(message);
+        io.emit('buzz', message);
+    });
+});
+
 /**
  * Listen on provided port, on all network interfaces.
  */
