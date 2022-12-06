@@ -16,6 +16,7 @@ $(document).ready(function () {
     });
 
     socket.onAny((eventName, message) => {
+        $('#first').text(message.user);
         console.log(eventName);
         console.log(message);
     });
